@@ -1,9 +1,9 @@
 name: 'Parse Body'
 description: 'Extracts an issue body section'
 inputs:
-  issue: 
+  issueBody: 
     required: true
-    description: 'The issue to verify'
+    description: 'The body of the issue to extract'
   separator:
     required: false
     default: '### '
