@@ -1,0 +1,19 @@
+name: 'Parse Body'
+description: 'Extracts an issue body section'
+inputs:
+  issue: 
+    required: true
+    description: 'The issue to verify'
+  separator:
+    required: false
+    default: '### '
+    description: 'The value to use to separate the body sections. Default is "### "'
+  sectionName:
+    required: true
+    description: 'The name of the section to extract, as it appears in the issue form'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'filter'
+  color: 'blue'
