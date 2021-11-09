@@ -3,7 +3,7 @@ import {context} from '@actions/github';
 
 async function run(): Promise<void> {
     try {
-        core.debug(`Using v0.0.13-alpha`)
+        core.debug(`Using v0.0.14-alpha`)
         // const issue: string = core.getInput('issue')
         // core.debug(`Got issue: ${issue}  ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
 
@@ -24,7 +24,7 @@ async function run(): Promise<void> {
             // Split the section into header and content            
             const sectionParts: Array<string> = section.split("\n\n", 2);
             if (sectionParts.length === 2 && sectionParts[0] !== "") {
-                bodyArray[sectionParts[0]] = sectionParts[1];
+                bodyArray[sectionParts[0].trim()] = sectionParts[1];
                 core.debug(`Section Part: '${sectionParts[0]}': '${sectionParts[1]}'`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
             }
         });
