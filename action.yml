@@ -6,7 +6,7 @@ inputs:
     description: 'The body of the issue to extract'
   separator:
     required: false
-    default: '### '
+    default: "### "
     description: 'The value to use to separate the body sections. Default is "### "'
   sectionName:
     required: true

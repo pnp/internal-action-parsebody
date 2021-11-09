@@ -29,12 +29,8 @@ async function run(): Promise<void> {
             }
         });
 
-        core.setOutput('authors', bodyArray['Author(s)']);
-        if (bodyArray['Author(s)'].indexOf('@') > -1) {
-            core.setOutput('valid-authors',bodyArray['Author(s)']);
-        } else {
-            core.setOutput('valid-authors',"");
-        }
+        const sectionContent: string = bodyArray[sectionName] || "";
+        core.setOutput('sectionContent',sectionContent);
         
     } catch (error) {
         if (error instanceof Error) core.setFailed(error.message)
