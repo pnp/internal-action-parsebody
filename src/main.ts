@@ -3,7 +3,7 @@ import {context} from '@actions/github';
 
 async function run(): Promise<void> {
     try {
-        
+        core.debug(`Using v0.0.12-alpha`)
         // const issue: string = core.getInput('issue')
         // core.debug(`Got issue: ${issue}  ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
 
