@@ -1,32 +1,41 @@
 {
-    "name": "@pnp/internal-action-parsebody",
-    "version": "1.0.0",
-    "private": true,
-    "description": "A GitHub action that reads issue body, then parses and extracts sections",
-    "main": "dist/index.js",
-    "scripts": {
-        "build": "ncc build src/main.ts"
-    },
-    "author": "Bernier, Hugo <hugobernier@microsoft.com>",
-    "keywords": [
-      "actions",
-      "PnP",
-      "issue"
-    ],
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/pnp/internal-action-parsebody.git"
-      },
-    "dependencies": {
-      "@actions/core": "^1.6.0",
-      "@actions/exec": "^1.1.0",
-      "@actions/io": "^1.1.1"
-    },
-    "devDependencies": {
-      "@types/node": "^16.10.5",
-      "@vercel/ncc": "^0.31.1",
-      "typescript": "^4.4.4"
+  "name": "@pnp/internal-action-parsebody",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A GitHub action that reads issue body, then parses and extracts sections",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/main.ts"
+  },
+  "author": "Bernier, Hugo <hugobernier@microsoft.com>",
+  "maintainers": [
+    {
+      "name": "Hugo Bernier",
+      "email": "hugobernier@microsoft.com",
+      "web": "https://github.com/hugoabernier"
     }
+  ],
+  "keywords": [
+    "actions",
+    "PnP",
+    "issue"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnp/internal-action-parsebody.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pnp/internal-action-parsebody/issues"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/exec": "^1.1.0",
+    "@actions/io": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.5",
+    "@vercel/ncc": "^0.31.1",
+    "typescript": "^4.4.4"
   }
-  
+}
