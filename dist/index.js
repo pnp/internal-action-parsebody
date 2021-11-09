@@ -1593,7 +1593,7 @@ const core = __importStar(__nccwpck_require__(186));
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            core.debug(`Using v0.0.14-alpha`);
+            core.debug(`Using v0.0.15-alpha`);
             // const issue: string = core.getInput('issue')
             // core.debug(`Got issue: ${issue}  ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
             // const gitHubIssue  = JSON.parse(issue);
@@ -1611,8 +1611,10 @@ function run() {
                 // Split the section into header and content            
                 const sectionParts = section.split("\n\n", 2);
                 if (sectionParts.length === 2 && sectionParts[0] !== "") {
-                    bodyArray[sectionParts[0].trim()] = sectionParts[1];
-                    core.debug(`Section Part: '${sectionParts[0]}': '${sectionParts[1]}'`); // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+                    const sectionName = sectionParts[0].trim();
+                    const sectionContent = sectionParts[1];
+                    bodyArray[sectionName] = sectionContent;
+                    core.debug(`Section Part: '${sectionName}': '${sectionContent}'`); // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
                 }
             });
             const sectionContent = bodyArray[sectionName] || "";
